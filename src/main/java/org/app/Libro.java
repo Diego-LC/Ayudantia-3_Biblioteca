@@ -1,40 +1,42 @@
-package org.app;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class Libro {
-    private String nombreLibro;
-    private String nombreAutor;
-    private String nombreEditorial;
+	private String nombreLibro;
+	private String nombreAutor;
+	private String nombreEditorial;
+	private String isbn;
 
-    public Libro(String libro, String autor, String editorial){
-        this.nombreLibro = libro;
-        this.nombreAutor = autor;
-        this.nombreEditorial = editorial;
-    }
+	public void Libro(String nombreLibro, String nombreAutor, String nombreEditorial) {
+		throw new UnsupportedOperationException();
+	}
 
-    public String getNombreLibro() {
-        return nombreLibro;
-    }
+	public String getNombreLibro() {
+		return this.nombreLibro;
+	}
 
-    public String getNombreAutor() {
-        return nombreAutor;
-    }
+	public void setNombreLibro(String nombreLibro) {
+		this.nombreLibro = nombreLibro;
+	}
 
-    public String getNombreEditorial() {
-        return nombreEditorial;
-    }
+	public String getNombreAutor() {
+		return this.nombreAutor;
+	}
 
-    public void setNombreLibro(String nombreLibro) {
-        this.nombreLibro = nombreLibro;
-    }
+	public void setNombreAutor(String nombreAutor) {
+		this.nombreAutor = nombreAutor;
+	}
 
-    public void setNombreAutor(String nombreAutor) {
-        this.nombreAutor = nombreAutor;
-    }
+	public String getNombreEditorial() {
+		return this.nombreEditorial;
+	}
 
-    public void setNombreEditorial(String nombreEditorial) {
-        this.nombreEditorial = nombreEditorial;
-    }
+	public void setNombreEditorial(String nombreEditorial) {
+		this.nombreEditorial = nombreEditorial;
+	}
+
+	public String getIsbn() {
+		return this.isbn;
+	}
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
 }
