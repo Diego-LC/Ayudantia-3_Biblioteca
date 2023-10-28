@@ -1,4 +1,7 @@
+package org.app;
+
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Prestamo {
 	private Date fechaInicio;

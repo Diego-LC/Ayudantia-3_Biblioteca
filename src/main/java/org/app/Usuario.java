@@ -1,3 +1,5 @@
+package org.app;
+
 public class Usuario {
 	private String nombre;
 	private String rut;
