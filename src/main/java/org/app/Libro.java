@@ -5,6 +5,7 @@ public class Libro {
 	private String nombreAutor;
 	private String nombreEditorial;
 	private String isbn;
+	private boolean esPrestado;
 
 	public void Libro(String nombreLibro, String nombreAutor, String nombreEditorial) {
 		throw new UnsupportedOperationException();
@@ -40,5 +41,13 @@ public class Libro {
 
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
+	}
+
+	public boolean getEsPrestado() {
+        return this.esPrestado;
+    }
+
+	public void setEsPrestado(boolean esPrestado) {
+		this.esPrestado = esPrestado;
 	}
 }

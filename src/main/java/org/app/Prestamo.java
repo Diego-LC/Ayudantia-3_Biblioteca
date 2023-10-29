@@ -10,6 +10,9 @@ public class Prestamo {
 	private Bibliotecario bibliotecario;
 	private ArrayList<Libro> libro = new ArrayList<Libro>();
 
+	public Prestamo(Bibliotecario bibliotecario, Libro libro, Usuario usuario, Date fechaInicio, Date fechaTermino) {
+	}
+
 	public Date getFechaInicio() {
 		return this.fechaInicio;
 	}
