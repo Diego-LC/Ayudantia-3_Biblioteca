@@ -43,4 +43,9 @@ public class Bibliotecario {
 	public void setIdBibliotecario(int idBibliotecario) {
 		this.idBibliotecario = idBibliotecario;
 	}
+
+	@Override
+	public String toString() {
+		return getNombre() + ", " + getRut() + ", " + getDireccion() + ", " + getIdBibliotecario();
+	}
 }
