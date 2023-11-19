@@ -58,6 +58,6 @@ public class Libro {
 
 @Override
 	public String toString(){
-		return "["+nombreLibro+", "+nombreAutor+", "+nombreEditorial+", "+isbn+", "+String.valueOf(esPrestado)+"]";
+		return nombreLibro+","+nombreAutor+","+nombreEditorial+","+isbn+","+String.valueOf(esPrestado);
 }
 }

@@ -53,9 +53,13 @@ public class Bibliotecario {
 		this.prestamos.add(prestamo);
 	}
 
+	public ArrayList<Prestamo> getPrestamos(){
+		return this.prestamos;
+	}
+
 	@Override
 	public String toString() {
-		return getNombre() + ", " + getRut() + ", " + getDireccion() + ", " + getIdBibliotecario()+", "+this.prestamos.toString();
+		return getNombre() + "," + getRut() + "," + getDireccion() + "," + getIdBibliotecario();
 	}
 
 }

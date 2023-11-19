@@ -34,6 +34,9 @@ public class Biblioteca {
 	public void agregarBibliotecario(String nombre, String rut, String direccion, int idBibliotecario){
 		this.bibliotecario = new Bibliotecario(nombre, rut, direccion, idBibliotecario);
 	}
+	public Bibliotecario getBibliotecario(){
+		return this.bibliotecario;
+	}
 
 	public void agregarLibro(Libro libro) {
 		try {
@@ -55,6 +58,9 @@ public class Biblioteca {
 		}
 	}
 
+	public ArrayList<Libro> getLibros(){
+		return this.libros;
+	}
 
 	public Libro buscarLibro(String nombreLibro) {
 		for (Libro l : this.libros) {

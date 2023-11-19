@@ -3,7 +3,7 @@ import org.app.*;
 import java.io.*;
 
 public class GestorDatos {
-    public void leerArchivoBiblioteca(String direccionArchivo, Biblioteca biblioteca, Bibliotecario bibliotecario) {
+    public void leerArchivoBiblioteca(String direccionArchivo, Biblioteca biblioteca) {
         String textoArchivo = "";
         try {
             File archivo = new File(direccionArchivo);
@@ -12,10 +12,12 @@ public class GestorDatos {
         //Lee cada línea del archivo hasta que la línea sea nula
             while((textoArchivo = br.readLine()) != null){
                 String[] data = textoArchivo.split(",");
-                bibliotecario.setNombre(data[0]);
-                bibliotecario.setRut(data[1]);
-                bibliotecario.setDireccion(data[2]);
-                bibliotecario.setIdBibliotecario(Integer.parseInt(data[5]));
+                biblioteca.agregarBibliotecario(data[0],data[1],data[2],Integer.parseInt(data[3]));
+                String[] prestamos = data[4].split(";");
+                for (String prestamo: prestamos) {
+                    System.out.println(prestamo);
+                }
+
             }
             br.close();
         } catch (Exception e) {

@@ -1,0 +1,2 @@
+nombreBibliotecario,20123456-7,direccion Bibliotecario,1234567
+18-11-2023,28-11-2023,nombreUsuario1,rutUsuario1,numTelefonoUsuario1,nombreLibro1,nombreAutor1,nombreEditorial1,isbn123,true

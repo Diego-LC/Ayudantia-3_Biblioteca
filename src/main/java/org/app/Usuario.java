@@ -50,6 +50,6 @@ public class Usuario {
 
 	@Override
 	public String toString(){
-		return "["+nombre+", "+rut+", "+numeroTelefono+"]";
+		return nombre+","+rut+","+numeroTelefono;
 	}
 }

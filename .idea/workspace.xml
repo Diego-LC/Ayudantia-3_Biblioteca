@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89bf29c2-e36d-462d-b656-4f44a7c01a4f" name="Changes" comment="mejorado emplementación de excepciones">
-      <change afterPath="$PROJECT_DIR$/src/main/java/launcher/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/manejoDatos/GestorDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_28_10_2023_22_48_[Changes]/shelved.patch" beforeDir="false" />
+    <list default="true" id="89bf29c2-e36d-462d-b656-4f44a7c01a4f" name="Changes" comment="implementado registrar dato de la clase GestorDatos.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datosBiblioteca.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/launcher/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/launcher/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manejoDatos/GestorDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manejoDatos/GestorDatos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Biblioteca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Bibliotecario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Bibliotecario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Libro.java" afterDir="false" />
@@ -85,7 +85,7 @@
       <workItem from="1698533855043" duration="3587000" />
       <workItem from="1698614938185" duration="75000" />
       <workItem from="1700157100181" duration="8047000" />
-      <workItem from="1700186579140" duration="28663000" />
+      <workItem from="1700186579140" duration="35372000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial commit">
       <option name="closed" value="true" />
@@ -135,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700321315460</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="implementado registrar dato de la clase GestorDatos.java">
+      <option name="closed" value="true" />
+      <created>1700356240243</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700356240244</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,15 +166,16 @@
     <MESSAGE value="Clase Libro creada con su constructor, getters y setters" />
     <MESSAGE value="Agregado clases adicionales generadas con visual paradigm" />
     <MESSAGE value="mejorado emplementación de excepciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="mejorado emplementación de excepciones" />
+    <MESSAGE value="implementado registrar dato de la clase GestorDatos.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementado registrar dato de la clase GestorDatos.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/manejoDatos/GestorDatos.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="2" />
+          <line>13</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
