@@ -1,5 +1,6 @@
 package org.app;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -8,9 +9,14 @@ public class Prestamo {
 	private Date fechaTermino;
 	private Usuario usuario;
 	private Bibliotecario bibliotecario;
-	private ArrayList<Libro> libro = new ArrayList<Libro>();
+	private ArrayList<Libro> libros = new ArrayList<Libro>();
 
 	public Prestamo(Bibliotecario bibliotecario, Libro libro, Usuario usuario, Date fechaInicio, Date fechaTermino) {
+		this.bibliotecario = bibliotecario;
+		this.libros.add(libro);
+		this.usuario = usuario;
+		this.fechaInicio = fechaInicio;
+		this.fechaTermino = fechaTermino;
 	}
 
 	public Date getFechaInicio() {
@@ -29,7 +35,12 @@ public class Prestamo {
 		this.fechaTermino = fechaTermino;
 	}
 
-	public Prestamo() {
-		throw new UnsupportedOperationException();
+	private String formatearFecha(Date fecha){
+		return new SimpleDateFormat("dd-MM-yyyy").format(fecha);
+	}
+
+	@Override
+	public String toString(){
+        return "["+formatearFecha(fechaInicio)+", "+formatearFecha(fechaTermino)+", "+usuario.toString()+", "+libros.toString()+"]";
 	}
 }

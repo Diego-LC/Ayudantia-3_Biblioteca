@@ -6,9 +6,14 @@ public class Libro {
 	private String nombreEditorial;
 	private String isbn;
 	private boolean esPrestado;
+	private Prestamo prestamo;
 
-	public void Libro(String nombreLibro, String nombreAutor, String nombreEditorial) {
-		throw new UnsupportedOperationException();
+	public Libro(String nombreLibro, String nombreAutor, String nombreEditorial, String isbn, boolean b) {
+		this.nombreLibro = nombreLibro;
+		this.nombreAutor = nombreAutor;
+		this.nombreEditorial = nombreEditorial;
+		this.isbn = isbn;
+		this.esPrestado = b;
 	}
 
 	public String getNombreLibro() {
@@ -50,4 +55,9 @@ public class Libro {
 	public void setEsPrestado(boolean esPrestado) {
 		this.esPrestado = esPrestado;
 	}
+
+@Override
+	public String toString(){
+		return "["+nombreLibro+", "+nombreAutor+", "+nombreEditorial+", "+isbn+", "+String.valueOf(esPrestado)+"]";
+}
 }

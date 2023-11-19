@@ -5,10 +5,15 @@ public class Usuario {
 	private String rut;
 	private String numeroTelefono;
 	private Prestamo prestamo;
-	private Biblioteca biblioteca;
 
 	public Usuario() {
 		throw new UnsupportedOperationException();
+	}
+
+	public Usuario(String nombre, String rut, String numTelefono) {
+		this.nombre = nombre;
+		this.rut = rut;
+		this.numeroTelefono = numTelefono;
 	}
 
 	public String getNombre() {
@@ -33,5 +38,18 @@ public class Usuario {
 
 	public void setNumeroTelefono(String numeroTelefono) {
 		this.numeroTelefono = numeroTelefono;
+	}
+
+	public Prestamo getPrestamo() {
+		return this.prestamo;
+	}
+	
+	public void setPrestamo(Prestamo prestamo) {
+	this.prestamo = prestamo;
+	}
+
+	@Override
+	public String toString(){
+		return "["+nombre+", "+rut+", "+numeroTelefono+"]";
 	}
 }

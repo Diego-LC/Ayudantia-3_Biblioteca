@@ -1,15 +1,20 @@
 package org.app;
 
+import java.util.ArrayList;
+
 public class Bibliotecario {
 	private String nombre;
 	private String rut;
 	private String direccion;
 	private int idBibliotecario;
 	private Biblioteca biblioteca;
-	private Prestamo prestamo;
+	private ArrayList<Prestamo> prestamos = new ArrayList<Prestamo>();
 
-	public void Bibliotecario() {
-		throw new UnsupportedOperationException();
+	public Bibliotecario(String nombre, String rut, String direccion, int idBibliotecario) {
+		this.nombre = nombre;
+		this.rut = rut;
+		this.direccion = direccion;
+		this.idBibliotecario = idBibliotecario;
 	}
 
 	public String getNombre() {
@@ -44,8 +49,13 @@ public class Bibliotecario {
 		this.idBibliotecario = idBibliotecario;
 	}
 
+	public void agregarPrestamo(Prestamo prestamo) {
+		this.prestamos.add(prestamo);
+	}
+
 	@Override
 	public String toString() {
-		return getNombre() + ", " + getRut() + ", " + getDireccion() + ", " + getIdBibliotecario();
+		return getNombre() + ", " + getRut() + ", " + getDireccion() + ", " + getIdBibliotecario()+", "+this.prestamos.toString();
 	}
+
 }

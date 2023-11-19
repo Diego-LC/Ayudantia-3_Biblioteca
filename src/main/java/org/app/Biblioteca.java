@@ -10,9 +10,9 @@ public class Biblioteca {
 	private ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
 	private ArrayList<Libro> libros = new ArrayList<Libro>();
 
-	public Biblioteca(String nombreBiblioteca, String direccionBiblioteca) {
-		this.nombreBiblioteca = nombreBiblioteca;
-		this.direccionBiblioteca = direccionBiblioteca;
+	public Biblioteca(String nombre, String direccion) {
+		this.nombreBiblioteca = nombre;
+		this.direccionBiblioteca = direccion;
 	}
 
 	public String getNombreBiblioteca() {
@@ -31,6 +31,10 @@ public class Biblioteca {
 		this.direccionBiblioteca = direccionBiblioteca;
 	}
 
+	public void agregarBibliotecario(String nombre, String rut, String direccion, int idBibliotecario){
+		this.bibliotecario = new Bibliotecario(nombre, rut, direccion, idBibliotecario);
+	}
+
 	public void agregarLibro(Libro libro) {
 		try {
 			// Método que recibe un libro como parámetro, verifica si no está en la lista de libros y lo agrega.
@@ -44,7 +48,6 @@ public class Biblioteca {
 
 			libros.add(libro);
 		} catch (NullPointerException | IllegalArgumentException ex) {
-			// Manejo de excepciones específicas lanzadas anteriormente
 			System.err.println("Error al agregar el libro: " + ex.getMessage());
 		} catch (Exception ex) {
 			// Manejo de otras excepciones no previstas
@@ -81,36 +84,47 @@ public class Biblioteca {
 		return false;
 	}
 
-	public Prestamo generarPrestamo(Bibliotecario bibliotecario, Libro libro, Usuario usuario, Date fechaInicio, Date fechaTermino) {
-		validarCondiciones(libro, bibliotecario, usuario, fechaInicio, fechaTermino);
+	public Prestamo generarPrestamo(Libro libro, Usuario usuario, Date fechaInicio, Date fechaTermino) {
+		validarCondicionesPrestamo(libro, usuario, fechaInicio, fechaTermino);
 
-		Prestamo prestamo = crearPrestamo(bibliotecario, libro, usuario, fechaInicio, fechaTermino);
+		Prestamo prestamo = crearPrestamo(libro, usuario, fechaInicio, fechaTermino);
 		libro.setEsPrestado(true);
-
+		this.bibliotecario.agregarPrestamo(prestamo);
+		usuario.setPrestamo(prestamo);
+		this.usuarios.add(usuario);
 		return prestamo;
 	}
 
-	private void validarCondiciones(Libro libro, Bibliotecario bibliotecario, Usuario usuario, Date fechaInicio, Date fechaTermino) {
-		if (!libroExiste(libro)) {
-			throw new IllegalArgumentException("El libro no existe en la biblioteca");
-		}
+	private void validarCondicionesPrestamo(Libro libro, Usuario usuario, Date fechaInicio, Date fechaTermino) {
+		try{
+			if (!libroExiste(libro)) {
+				throw new IllegalArgumentException("El libro no existe en la biblioteca");
+			}
 
-		if (libro.getEsPrestado()) {
-			throw new IllegalStateException("El libro ya está prestado");
-		}
+			if (libro.getEsPrestado()) {
+				throw new IllegalStateException("El libro ya está prestado");
+			}
 
-		if (bibliotecario == null || usuario == null || fechaInicio == null || fechaTermino == null) {
-			throw new NullPointerException("Ningún argumento puede ser nulo");
-		}
+			if (this.bibliotecario == null || usuario == null || fechaInicio == null || fechaTermino == null) {
+				throw new NullPointerException("Ningún argumento puede ser nulo");
+			}
 
-		if (fechaInicio.after(fechaTermino)) {
-			throw new IllegalArgumentException("La fecha de inicio debe ser anterior a la fecha de término");
+			if (fechaInicio.after(fechaTermino)) {
+				throw new IllegalArgumentException("La fecha de inicio debe ser anterior a la fecha de término");
+			}
+		}
+		catch (IllegalArgumentException | IllegalStateException | NullPointerException ex){
+			System.err.println("ex.getMessage() = " + ex.getMessage());
+		}
+		catch (Exception ex){
+			System.err.println("Error: " + ex.getMessage());
 		}
 	}
 
-	private Prestamo crearPrestamo(Bibliotecario bibliotecario, Libro libro, Usuario usuario, Date fechaInicio, Date fechaTermino) {
+	private Prestamo crearPrestamo(Libro libro, Usuario usuario, Date fechaInicio, Date fechaTermino) {
 		try {
-			return new Prestamo(bibliotecario, libro, usuario, fechaInicio, fechaTermino);
+			libro.setEsPrestado(true);
+			return new Prestamo(this.bibliotecario, libro, usuario, fechaInicio, fechaTermino);
 		} catch (Exception ex) {
 			System.err.println("Error al crear el préstamo: " + ex.getMessage());
 			// Puedes manejar el error de otra manera, como lanzar una excepción o devolver un valor predeterminado
@@ -119,7 +133,7 @@ public class Biblioteca {
 	}
 	@Override
 	public String toString(){
-		return getNombreBiblioteca() + getDireccionBiblioteca();
+        return this.bibliotecario.toString()+", "+this.libros.toString();
 	}
 
 }
