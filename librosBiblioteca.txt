@@ -1,0 +1,2 @@
+nombreLibro1,nombreAutor1,nombreEditorial1,isbn123,true
+nombreLibro2,nombreAutor2,nombreEditorial2,isbn234,false

@@ -27,9 +27,11 @@ public class Main {
         guardarPrestamos(bibliotecario);
         guardarLibros(biblioteca);
 
+        Biblioteca biblioteca2 = new Biblioteca("Nombre2", "Direccion2");
+
         GestorDatos gd = new GestorDatos();
-        gd.leerArchivoPrestamosbiblioteca(biblioteca, "prestamosBiblioteca.txt");
-        gd.leerArchivoLibrosBiblioteca(biblioteca, "librosBiblioteca.txt");
+        gd.leerArchivoPrestamosbiblioteca(biblioteca2, "prestamosBiblioteca.txt");
+        gd.leerArchivoLibrosBiblioteca(biblioteca2, "librosBiblioteca.txt");
     }
 
     private static void guardarPrestamos(Bibliotecario bibliotecario){

@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89bf29c2-e36d-462d-b656-4f44a7c01a4f" name="Changes" comment="mejorado metodo registrarDato() de la clase GestorDatos.java">
+    <list default="true" id="89bf29c2-e36d-462d-b656-4f44a7c01a4f" name="Changes" comment="Actualizada imagen diagrama jpg y archivo vpp">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/launcher/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/launcher/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manejoDatos/GestorDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manejoDatos/GestorDatos.java" afterDir="false" />
     </list>
@@ -77,7 +78,7 @@
       <workItem from="1698533855043" duration="3587000" />
       <workItem from="1698614938185" duration="75000" />
       <workItem from="1700157100181" duration="8047000" />
-      <workItem from="1700186579140" duration="35811000" />
+      <workItem from="1700186579140" duration="38601000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial commit">
       <option name="closed" value="true" />
@@ -143,7 +144,31 @@
       <option name="project" value="LOCAL" />
       <updated>1700362360735</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="implementado metodos leer archivos">
+      <option name="closed" value="true" />
+      <created>1700364904613</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700364904613</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Actualizada imagen diagrama jpg y archivo vpp">
+      <option name="closed" value="true" />
+      <created>1700365331625</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700365331625</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Actualizada imagen diagrama jpg y archivo vpp">
+      <option name="closed" value="true" />
+      <created>1700365340760</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1700365340760</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,17 +193,8 @@
     <MESSAGE value="mejorado emplementación de excepciones" />
     <MESSAGE value="implementado registrar dato de la clase GestorDatos.java" />
     <MESSAGE value="mejorado metodo registrarDato() de la clase GestorDatos.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="mejorado metodo registrarDato() de la clase GestorDatos.java" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/manejoDatos/GestorDatos.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="implementado metodos leer archivos" />
+    <MESSAGE value="Actualizada imagen diagrama jpg y archivo vpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizada imagen diagrama jpg y archivo vpp" />
   </component>
 </project>

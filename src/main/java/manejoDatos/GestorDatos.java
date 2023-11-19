@@ -20,7 +20,8 @@ public class GestorDatos {
                     String[] data = textoArchivo.split(",");
                     SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
                     Usuario usuario = new Usuario(data[2],data[3],data[4]);
-                    Libro libro = new Libro(data[5],data[6],data[7],data[8],Boolean.parseBoolean(data[9]));
+                    Libro libro = new Libro(data[5],data[6],data[7],data[8],false);
+                    biblioteca.agregarLibro(libro);
                     biblioteca.generarPrestamo(libro, usuario, sdf.parse(data[0]),sdf.parse(data[1]));
                 }
                 contador++;
