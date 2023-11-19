@@ -4,7 +4,6 @@ import manejoDatos.GestorDatos;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -24,9 +23,13 @@ public class Main {
         } catch (ParseException e) {
             System.err.println("error: "+ e.getMessage());
         }
+
         guardarPrestamos(bibliotecario);
         guardarLibros(biblioteca);
 
+        GestorDatos gd = new GestorDatos();
+        gd.leerArchivoPrestamosbiblioteca(biblioteca, "prestamosBiblioteca.txt");
+        gd.leerArchivoLibrosBiblioteca(biblioteca, "librosBiblioteca.txt");
     }
 
     private static void guardarPrestamos(Bibliotecario bibliotecario){
@@ -42,9 +45,5 @@ public class Main {
             gd.registrarDato(libro, "librosBiblioteca.txt");
         }
     }
-    private static void leerPrestamos(Bibliotecario bibliotecario){
-
-    }
-
 
 }

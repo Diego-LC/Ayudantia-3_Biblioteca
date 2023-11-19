@@ -1,9 +1,37 @@
 package manejoDatos;
 import org.app.*;
 import java.io.*;
+import java.text.SimpleDateFormat;
 
 public class GestorDatos {
-    public void leerArchivoBiblioteca(String direccionArchivo, Biblioteca biblioteca) {
+    public void leerArchivoPrestamosbiblioteca(Biblioteca biblioteca, String direccionArchivo) {
+        String textoArchivo = "";
+        try {
+            File archivo = new File(direccionArchivo);
+            FileReader fr = new FileReader(archivo);
+            BufferedReader br = new BufferedReader(fr);
+        //Lee cada línea del archivo hasta que la línea sea nula
+            int contador = 1;
+            while((textoArchivo = br.readLine()) != null){
+                if (contador == 1){
+                    String[] data = textoArchivo.split(",");
+                    biblioteca.agregarBibliotecario(data[0],data[1],data[2],Integer.parseInt(data[3]));
+                }else{
+                    String[] data = textoArchivo.split(",");
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                    Usuario usuario = new Usuario(data[2],data[3],data[4]);
+                    Libro libro = new Libro(data[5],data[6],data[7],data[8],Boolean.parseBoolean(data[9]));
+                    biblioteca.generarPrestamo(libro, usuario, sdf.parse(data[0]),sdf.parse(data[1]));
+                }
+                contador++;
+            }
+            br.close();
+        } catch (Exception e) {
+            System.out.println("Documento no disponible, favor contactar con administrador");
+        }
+    }
+
+    public void leerArchivoLibrosBiblioteca(Biblioteca biblioteca, String direccionArchivo) {
         String textoArchivo = "";
         try {
             File archivo = new File(direccionArchivo);
@@ -12,12 +40,8 @@ public class GestorDatos {
         //Lee cada línea del archivo hasta que la línea sea nula
             while((textoArchivo = br.readLine()) != null){
                 String[] data = textoArchivo.split(",");
-                biblioteca.agregarBibliotecario(data[0],data[1],data[2],Integer.parseInt(data[3]));
-                String[] prestamos = data[4].split(";");
-                for (String prestamo: prestamos) {
-                    System.out.println(prestamo);
-                }
-
+                Libro libro = new Libro(data[0],data[1],data[2],data[3],Boolean.parseBoolean(data[4]));
+                biblioteca.agregarLibro(libro);
             }
             br.close();
         } catch (Exception e) {
