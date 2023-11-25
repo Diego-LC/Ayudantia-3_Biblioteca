@@ -31,14 +31,14 @@ public class Biblioteca {
 		this.direccionBiblioteca = direccionBiblioteca;
 	}
 
-	public void agregarBibliotecario(String nombre, String rut, String direccion, int idBibliotecario){
-		this.bibliotecario = new Bibliotecario(nombre, rut, direccion, idBibliotecario);
+	public void setBibliotecario(Bibliotecario bibliotecario){
+		this.bibliotecario = bibliotecario;
 	}
 	public Bibliotecario getBibliotecario(){
 		return this.bibliotecario;
 	}
 
-	public void agregarLibro(Libro libro) {
+	public void setLibro(Libro libro) {
 		try {
 			// Método que recibe un libro como parámetro, verifica si no está en la lista de libros y lo agrega.
 			if (libro == null) {

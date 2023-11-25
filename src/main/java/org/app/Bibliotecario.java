@@ -2,7 +2,7 @@ package org.app;
 
 import java.util.ArrayList;
 
-public class Bibliotecario {
+public class Bibliotecario extends Persona {
 	private String nombre;
 	private String rut;
 	private String direccion;
