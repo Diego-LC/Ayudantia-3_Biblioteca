@@ -9,15 +9,16 @@ import ventanas.*;
 import manejoDatos.GestorDatos;
 
 public class Controlador {
-
+    Biblioteca biblioteca;
     public Biblioteca iniciarSistema() {
-        Biblioteca biblioteca = leerArchivosBiblioteca();
-
-        guardarPrestamos(biblioteca.getBibliotecario());
-
-        guardarLibros(biblioteca);
+        this.biblioteca = leerArchivosBiblioteca();
 
         return biblioteca;
+    }
+
+    public void guardarDatos(Biblioteca biblioteca){
+        guardarPrestamos(biblioteca.getBibliotecario());
+        guardarLibros(biblioteca);
     }
 
     private Biblioteca leerArchivosBiblioteca() {

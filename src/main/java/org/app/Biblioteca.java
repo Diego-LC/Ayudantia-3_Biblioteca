@@ -3,6 +3,8 @@ package org.app;
 import java.util.ArrayList;
 import java.util.Date;
 
+import launcher.Controlador;
+
 public class Biblioteca {
 	private String nombreBiblioteca;
 	private String direccionBiblioteca;
@@ -36,6 +38,15 @@ public class Biblioteca {
 	}
 	public Bibliotecario getBibliotecario(){
 		return this.bibliotecario;
+	}
+
+	public boolean setNewLibro(String nombreLibro, String nombreAutor, String nombreEditorial, String isbn){
+		Libro libro = new Libro(nombreLibro, nombreAutor, nombreEditorial, isbn, false);
+		if (libroExiste(libro)){
+			return false;
+		}
+		this.libros.add(libro);
+		return true;
 	}
 
 	public void setLibro(Libro libro) {
