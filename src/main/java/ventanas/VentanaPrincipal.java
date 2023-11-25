@@ -28,7 +28,11 @@ public class VentanaPrincipal extends VentanaGeneral {
         this.add(btnAgregarLibro);
         btnAgregarLibro.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // Código para agregar libro
+                // Crea una nueva instancia de VentanaLibro y la muestra
+            VentanaLibro ventanaLibro = new VentanaLibro(biblioteca, VentanaPrincipal.this);
+            ventanaLibro.setVisible(true);
+            // Opcional: oculta la ventana principal
+            setVisible(false);
             }
         });
     }
