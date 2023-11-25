@@ -28,8 +28,7 @@ public class GestorDatos {
             }
             br.close();
             FileWriter fw = new FileWriter(archivo);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(""); // Limpia el archivo
+            BufferedWriter bw = new BufferedWriter(fw); // Limpia el archivo
             bw.close();
         } catch (Exception e) {
             System.out.println("Documento no disponible, favor contactar con administrador");
@@ -49,8 +48,7 @@ public class GestorDatos {
                 biblioteca.setLibro(libro);
             }
             FileWriter fw = new FileWriter(archivo);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(""); // Limpia el archivo
+            BufferedWriter bw = new BufferedWriter(fw); // Limpia el archivo
             bw.close();
             br.close();
         } catch (Exception e) {

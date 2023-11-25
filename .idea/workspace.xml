@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89bf29c2-e36d-462d-b656-4f44a7c01a4f" name="Changes" comment="Corregido cargar archivo prestamos cuando libro ya estaba prestado">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prestamosBiblioteca.txt" beforeDir="false" afterPath="$PROJECT_DIR$/prestamosBiblioteca.txt" afterDir="false" />
+    <list default="true" id="89bf29c2-e36d-462d-b656-4f44a7c01a4f" name="Changes" comment="Agregado paquete ventanas e implementado GUI de la clase VentanaPrincipal pero con sus botones no implementado">
+      <change beforePath="$PROJECT_DIR$/src/main/java/launcher/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/launcher/Controlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/launcher/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/launcher/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manejoDatos/GestorDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manejoDatos/GestorDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Biblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Bibliotecario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Bibliotecario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Usuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +80,7 @@
       <workItem from="1700186579140" duration="38765000" />
       <workItem from="1700420245932" duration="48000" />
       <workItem from="1700763589945" duration="2031000" />
-      <workItem from="1700888553475" duration="8210000" />
+      <workItem from="1700888553475" duration="9343000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial commit">
       <option name="closed" value="true" />
@@ -183,7 +178,31 @@
       <option name="project" value="LOCAL" />
       <updated>1700366802540</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Mejorado y limpiado código del main, una vez leído los archivos, se limpian para no agregar líneas repetidas al guardar.">
+      <option name="closed" value="true" />
+      <created>1700926603409</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700926603409</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Agregado clase abstracta 'Persona', agregado clase enum Especialidad.">
+      <option name="closed" value="true" />
+      <created>1700926737607</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700926737608</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Agregado paquete ventanas e implementado GUI de la clase VentanaPrincipal pero con sus botones no implementado">
+      <option name="closed" value="true" />
+      <created>1700926887258</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700926887258</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +230,10 @@
     <MESSAGE value="implementado metodos leer archivos" />
     <MESSAGE value="Actualizada imagen diagrama jpg y archivo vpp" />
     <MESSAGE value="Corregido cargar archivo prestamos cuando libro ya estaba prestado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corregido cargar archivo prestamos cuando libro ya estaba prestado" />
+    <MESSAGE value="Mejorado y limpiado código del main, una vez leído los archivos, se limpian para no agregar líneas repetidas al guardar." />
+    <MESSAGE value="Agregado clase abstracta 'Persona', agregado clase enum Especialidad." />
+    <MESSAGE value="Agregado paquete ventanas e implementado clase VentanaPrincipal con sus botones" />
+    <MESSAGE value="Agregado paquete ventanas e implementado GUI de la clase VentanaPrincipal pero con sus botones no implementado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregado paquete ventanas e implementado GUI de la clase VentanaPrincipal pero con sus botones no implementado" />
   </component>
 </project>

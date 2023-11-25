@@ -10,14 +10,14 @@ import manejoDatos.GestorDatos;
 
 public class Controlador {
 
-    public void iniciarSistema() {
+    public Biblioteca iniciarSistema() {
         Biblioteca biblioteca = leerArchivosBiblioteca();
 
-        new VentanaPrincipal(biblioteca);
-
         guardarPrestamos(biblioteca.getBibliotecario());
+
         guardarLibros(biblioteca);
 
+        return biblioteca;
     }
 
     private Biblioteca leerArchivosBiblioteca() {
