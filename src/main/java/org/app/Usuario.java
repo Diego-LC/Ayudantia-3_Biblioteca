@@ -1,6 +1,6 @@
 package org.app;
 
-public class Usuario {
+public class Usuario extends Persona {
 	private String nombre;
 	private String rut;
 	private String numeroTelefono;
