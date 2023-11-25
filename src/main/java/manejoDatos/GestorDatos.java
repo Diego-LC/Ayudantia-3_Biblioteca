@@ -66,8 +66,8 @@ public class GestorDatos {
             }
             FileWriter fw = new FileWriter(file,true);
             BufferedWriter bw = new BufferedWriter(fw);
-        //Si el documento no es nuevo y tiene registrados datos, se debe crear un salto de línea
-            if(!lineaVacia){
+            //Si el documento no es nuevo y ya tiene registrados datos, se debe crear un salto de línea
+            if(!lineaVacia && file.length() > 0){
                 bw.newLine();
             }
             bw.write(objeto.toString());
@@ -78,5 +78,4 @@ public class GestorDatos {
             return false;
         }
     }
-
 }
