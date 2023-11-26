@@ -1,4 +1,6 @@
-# Ayudantia 3, 4 y 5 Biblioteca
+# Ayudantia 3, 4, 5 y 6 Biblioteca  
+
+---
 Ayudantía 3: Actividad de POO sobre constructores, getters y setters  
 Ayudantía 4: Actualización repositorio ayudantía 3. Actividad sobre relaciones entre clases (Asociación, agreción compocisión) y diagramas UML
 Ayundantía 5: Actualización repositorio. Actividad sobre relaciones entre paquetes, Implementación de una clase que gestiona datos de manera local. Actualización diagrama UML.
