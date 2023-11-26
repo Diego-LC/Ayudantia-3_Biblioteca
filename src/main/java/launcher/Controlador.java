@@ -4,6 +4,8 @@ import org.app.Biblioteca;
 import org.app.Bibliotecario;
 import org.app.Libro;
 import org.app.Prestamo;
+import org.app.Usuario;
+
 import ventanas.*;
 
 import manejoDatos.GestorDatos;
@@ -19,6 +21,7 @@ public class Controlador {
     public void guardarDatos(Biblioteca biblioteca){
         guardarPrestamos(biblioteca.getBibliotecario());
         guardarLibros(biblioteca);
+        guardarUsuarios(biblioteca);
     }
 
     private Biblioteca leerArchivosBiblioteca() {
@@ -26,6 +29,7 @@ public class Controlador {
         GestorDatos gd = new GestorDatos();
         gd.leerArchivoPrestamosbiblioteca(biblioteca, "prestamosBiblioteca.txt");
         gd.leerArchivoLibrosBiblioteca(biblioteca, "librosBiblioteca.txt");
+        gd.leerArchivoUsuariosBiblioteca(biblioteca, "usuariosBiblioteca.txt");
         return biblioteca;
     }
 
@@ -54,5 +58,18 @@ public class Controlador {
             }
         }
         System.out.printf("Se guardaron %d libros\n", guardado);
+    }
+
+    private void guardarUsuarios(Biblioteca biblioteca){
+        GestorDatos gd = new GestorDatos();
+        int guardado = 0;
+        for (Usuario usuario : biblioteca.getUsuarios()) {
+            if (gd.registrarDato(usuario, "usuariosBiblioteca.txt")){
+                guardado += 1;
+            }else{
+                System.out.println("Error al guardar usuario");
+            }
+        }
+        System.out.printf("Se guardaron %d usuarios\n", guardado);
     }
 }

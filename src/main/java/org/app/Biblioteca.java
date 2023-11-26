@@ -159,15 +159,35 @@ public class Biblioteca {
 		return true;
 	}
 
+	public void setUsuario(Usuario usuario) {
+		try {
+			// Método que recibe un usuario como parámetro, verifica si no está en la lista de usuarios y lo agrega.
+			if (usuario == null) {
+				throw new NullPointerException("El usuario no puede ser nulo");
+			}
+
+			if (usuarioExiste(usuario)) {
+				throw new IllegalArgumentException("El usuario ya existe en la biblioteca");
+			}
+
+			usuarios.add(usuario);
+		} catch (NullPointerException | IllegalArgumentException ex) {
+			System.err.println("Error al agregar el usuario: " + ex.getMessage());
+		} catch (Exception ex) {
+			// Manejo de otras excepciones no previstas
+			System.err.println("Error inesperado al agregar el usuario: " + ex.getMessage());
+		}
+	}
+
 	public ArrayList<Usuario> getUsuarios(){
 		return this.usuarios;
 	}
 
-	public ArrayList<Usuario> buscarUsuarioPorNombre(String nombreUsuario) {
-		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+	public ArrayList<String> buscarUsuarioPorNombre(String nombreUsuario) {
+		ArrayList usuarios = new ArrayList<String>();
 		for (Usuario u : this.usuarios) {
-			if (u.getNombre().equals(nombreUsuario)) {
-				usuarios.add(u);
+			if (u.getNombre().toLowerCase().contains(nombreUsuario.toLowerCase())) {
+				usuarios.add(u.getNombre());
 			}
 		}
 		return usuarios;

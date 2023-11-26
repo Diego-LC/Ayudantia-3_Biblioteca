@@ -56,6 +56,26 @@ public class GestorDatos {
         }
     }
 
+    public void leerArchivoUsuariosBiblioteca(Biblioteca biblioteca, String direccionArchivo) {
+        String textoArchivo = "";
+        try {
+            File archivo = new File(direccionArchivo);
+            FileReader fr = new FileReader(archivo);
+            BufferedReader br = new BufferedReader(fr);
+        //Lee cada línea del archivo hasta que la línea sea nula
+            while((textoArchivo = br.readLine()) != null){
+                String[] data = textoArchivo.split(",");
+                biblioteca.setNewUsuario(data[0],data[1],data[2]);
+            }
+            FileWriter fw = new FileWriter(archivo);
+            BufferedWriter bw = new BufferedWriter(fw); // Limpia el archivo
+            bw.close();
+            br.close();
+        } catch (Exception e) {
+            System.out.println("Documento no disponible, favor contactar con administrador");
+        }
+    }
+
     public boolean registrarDato(Object objeto, String direccionArchivo) {
         boolean lineaVacia=false;
         try {

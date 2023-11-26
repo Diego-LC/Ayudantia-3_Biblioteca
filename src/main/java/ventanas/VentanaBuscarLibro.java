@@ -1,7 +1,6 @@
 package ventanas;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -65,13 +64,12 @@ public class VentanaBuscarLibro extends VentanaGeneral {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.botonBuscarLibro) {
             String nombreLibro = this.textFieldNombreLibro.getText();
-            System.out.println(nombreLibro);
             this.lblListaResultado.removeAllItems();
             ArrayList<Libro> librosEncontrados = this.biblioteca.buscarLibroPorNombre(nombreLibro);
             for (Libro libro : librosEncontrados) {
                 this.lblListaResultado.addItem(libro.getNombreLibro());
-                System.out.println("Libros encontrados: " + libro.getNombreLibro());
             }
+            System.out.println("Libros encontrados: " + librosEncontrados.size());
 
         } else if (e.getSource() == this.botonVolver) {
             this.setVisible(false);

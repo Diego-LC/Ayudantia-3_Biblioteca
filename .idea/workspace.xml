@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89bf29c2-e36d-462d-b656-4f44a7c01a4f" name="Changes" comment="Corregido salto de línea agregado antes de guardar los datos cuando el archivo está vacío">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ventanas/VentanaLibro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ventanas/VentanaLibro.java" afterDir="false" />
+    <list default="true" id="89bf29c2-e36d-462d-b656-4f44a7c01a4f" name="Changes" comment="Implementado botón agregar libro que lleva a una nueva ventana para agregar un libro, implementado el botón volver de esta última">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/launcher/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/launcher/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/launcher/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/launcher/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/app/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/app/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ventanas/VentanaGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ventanas/VentanaGeneral.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ventanas/VentanaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ventanas/VentanaPrincipal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +84,7 @@
       <workItem from="1700186579140" duration="38765000" />
       <workItem from="1700420245932" duration="48000" />
       <workItem from="1700763589945" duration="2031000" />
-      <workItem from="1700888553475" duration="12129000" />
+      <workItem from="1700888553475" duration="17301000" />
     </task>
     <task id="LOCAL-00001" summary="Inicial commit">
       <option name="closed" value="true" />
@@ -218,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700929338264</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Implementado botón agregar libro que lleva a una nueva ventana para agregar un libro, implementado el botón volver de esta última">
+      <option name="closed" value="true" />
+      <created>1700937614680</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1700937614681</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +264,7 @@
     <MESSAGE value="Agregado paquete ventanas e implementado GUI de la clase VentanaPrincipal pero con sus botones no implementado" />
     <MESSAGE value="Corregido borrar los datos de los archivos correctamente luego de leerlos" />
     <MESSAGE value="Corregido salto de línea agregado antes de guardar los datos cuando el archivo está vacío" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corregido salto de línea agregado antes de guardar los datos cuando el archivo está vacío" />
+    <MESSAGE value="Implementado botón agregar libro que lleva a una nueva ventana para agregar un libro, implementado el botón volver de esta última" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementado botón agregar libro que lleva a una nueva ventana para agregar un libro, implementado el botón volver de esta última" />
   </component>
 </project>

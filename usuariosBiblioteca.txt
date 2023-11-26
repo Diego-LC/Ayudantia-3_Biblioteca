@@ -1,0 +1,3 @@
+nombreUsuario1,rutUsuario1,numTelefonoUsuario1
+Usuario2,11222333-5,56444111
+Nombre3,22111444-6,55444556
