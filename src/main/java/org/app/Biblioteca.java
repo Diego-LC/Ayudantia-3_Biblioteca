@@ -73,13 +73,14 @@ public class Biblioteca {
 		return this.libros;
 	}
 
-	public Libro buscarLibro(String nombreLibro) {
+	public ArrayList<Libro> buscarLibroPorNombre(String nombreLibro) {
+		ArrayList<Libro> libros = new ArrayList<Libro>();
 		for (Libro l : this.libros) {
-			if (l.getNombreLibro().equals(nombreLibro)) {
-				return l;
+			if (l.getNombreLibro().toLowerCase().contains(nombreLibro.toLowerCase())) {
+				libros.add(l);
 			}
 		}
-		return null;
+		return libros;
 	}
 
 	public ArrayList<Libro> obtenerLibroPorAutor(String nombreAutor) {
@@ -148,9 +149,41 @@ public class Biblioteca {
 			return null;
 		}
 	}
-	@Override
-	public String toString(){
-        return this.bibliotecario.toString()+", "+this.libros.toString();
+	
+	public boolean setNewUsuario(String nombreUsuario, String rutUsuario, String numeroTelefono) {
+		Usuario usuario = new Usuario(nombreUsuario, rutUsuario, numeroTelefono);
+		if (usuarioExiste(usuario)){
+			return false;
+		}
+		this.usuarios.add(usuario);
+		return true;
 	}
 
+	public ArrayList<Usuario> getUsuarios(){
+		return this.usuarios;
+	}
+
+	public ArrayList<Usuario> buscarUsuarioPorNombre(String nombreUsuario) {
+		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
+		for (Usuario u : this.usuarios) {
+			if (u.getNombre().equals(nombreUsuario)) {
+				usuarios.add(u);
+			}
+		}
+		return usuarios;
+	}
+
+	private boolean usuarioExiste(Usuario usuario) {
+		for (Usuario u : this.usuarios) {
+			if (u.getRut().equals(usuario.getRut())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	@Override
+	public String toString(){
+		return this.bibliotecario.toString()+", "+this.libros.toString();
+	}
 }

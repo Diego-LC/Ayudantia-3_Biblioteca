@@ -11,7 +11,7 @@ public class VentanaGeneral extends JFrame implements ActionListener{
     protected VentanaGeneral(String nombre, int largoX, int largoY){
         super(nombre);
         super.setVisible(true);
-        super.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        super.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         super.setSize(largoX, largoY);
         super.setLocationRelativeTo(null);
         super.setResizable(false);
